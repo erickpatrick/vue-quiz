@@ -11,11 +11,18 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  margin-top: 60px;
+.quiz {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quiz h1 {
+  text-align: center;
+}
+
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  width: 100%
 }
 </style>

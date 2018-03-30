@@ -3,7 +3,7 @@
         <b-card class="quiz__start">
             <div class="card-text">
                 <div class="quiz__start__introduction">
-                    <img src="/static/como-funciona.png" alt="">
+                    <img src="static/como-funciona.png" alt="">
                     <p>Breve descrição sobre como funciona o Mitos e Verdades. Mais detalhes serão entregues quando necessário</p>
                 </div>
                 <p class="quiz__start__link">

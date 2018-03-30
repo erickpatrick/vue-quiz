@@ -11,7 +11,6 @@
     props: {
       answer: {
         required: true,
-        type: Number,
       },
     },
     methods: {

@@ -12,12 +12,12 @@
         @next="next"/>
     </div>
 
-    <div v-if="current === numberOfQuestions">
+    <div v-if="current === numberOfQuestions && numberOfQuestions !== 0">
       <b-card class="quiz__results">
         <div class="card-text">
-          <p><img src="/static/congrats.png" alt=""/></p>
+          <p><img src="static/congrats.png" alt=""/></p>
           <p class="quiz__results__description">Você acertou <strong>{{correct}}</strong> de um total de {{numberOfQuestions}}. {{getMotivationalSentence()}}</p>
-          <p><a href="https://www.facebook.com/sharer/sharer.php?u=e"><img src="/static/fb.png" alt=""></a></p>
+          <p><a href="https://www.facebook.com/sharer/sharer.php?u=http://dev.promobe.com.br/mitos-e-verdades" target="_blank"><img src="static/fb.png" alt=""></a></p>
           <p class="quiz__results__again">Quer testar novamente seus conhecimentos? <a href="#" @click="reset">Repita o teste</a>.</p>
         </div>
       </b-card>
@@ -36,9 +36,9 @@ export default {
   },
   methods: {
     getQuestions() {
-      axios.get('http://wp.localhost/wp-json/wp/v2/quiz?per_page=20')
+      axios.get('http://dev.promobe.com.br/wp-json/wp/v2/quiz?per_page=20')
         .then((response) => {
-          this.questions = this.shuffle(response.data).slice(0, 2);
+          this.questions = this.shuffle(response.data).slice(0, 10);
         });
     },
     increment() {

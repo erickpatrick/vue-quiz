@@ -68,7 +68,7 @@ export default {
   },
   computed: {
     isMyth() {
-      return parseInt(this.question.mito, 10) === 0;
+      return parseInt(this.question.mito);
     },
   },
   methods: {
